@@ -3,188 +3,192 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thiệp cưới</title>
+  <title>Thiệp cưới Nguyệt Anh & Hoàn</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto&display=swap" rel="stylesheet"/>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Roboto', sans-serif;
       background: url('anhbia.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #2c2c2c;
     }
-
     .overlay {
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 40px 20px;
-      text-align: center;
+      background-color: rgba(255,255,255,0.85);
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
-
     h1 {
-      font-size: 40px;
-      color: #b55b2a;
-      margin-bottom: 10px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 48px;
+      text-align: center;
+      margin-top: 0;
+      color: #b86b77;
     }
-
-    h2 {
-      font-size: 24px;
-      color: #444;
-    }
-
-    .info-box {
-      background-color: #fff;
-      padding: 20px;
-      margin: 30px auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      max-width: 600px;
-    }
-
-    .photo-album {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      max-width: 850px;
-      margin: 30px auto;
-    }
-
-    .photo-album img {
-      width: 100%;
-      border-radius: 10px;
-    }
-
-    .qr-section {
+    .couple-img {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 40px;
-      margin: 40px 0;
+      margin-bottom: 20px;
     }
-
-    .qr-section img {
+    .couple-img img {
       width: 150px;
       height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+    .names {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .parents {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+    .invite-text {
+      text-align: center;
+      font-size: 18px;
+      margin: 30px 0 10px;
+    }
+    .info {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .album {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 30px auto;
+    }
+    .album img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .qrs {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .qrs div {
+      flex: 1 1 200px;
+    }
+    .qrs img {
+      width: 150px;
+      height: 150px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .confirm {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .confirm a {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #b86b77;
+      color: #fff;
+      text-decoration: none;
       border-radius: 8px;
     }
-
-    .form-section {
-      max-width: 600px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    .confirm a:hover {
+      background-color: #a25061;
     }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      text-align: left;
+    .footer {
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      margin-top: 40px;
     }
-
-    input[type="text"], textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 4px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-
-    .btn {
-      margin-top: 15px;
-      background-color: #b55b2a;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background-color: #944719;
-    }
-
-    /* ❄️ Snowfall */
-    .snowflake {
-      color: #fff;
-      font-size: 1em;
-      position: fixed;
-      top: -10px;
-      animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(-10px); }
-      100% { transform: translateY(110vh); }
+    audio {
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>Thiệp cưới</h1>
-    <h2>Đỗ Nguyệt Anh 💖 Trần Ngọc Hoàn</h2>
+    <h1>Nguyệt Anh & Hoàn</h1>
 
-    <div class="info-box">
-      <p>🌸 <strong>Trân trọng kính mời</strong></p>
-      <p>Tới dự lễ thành hôn của chúng tôi:</p>
-      <p>🏠 <strong>Nhà gái:</strong> 16h00 - Ngày 16/08/2025<br/>📍 16 Lý Thánh Tông, Lê Thanh Nghị</p>
-      <p>🏠 <strong>Nhà trai:</strong> 10h00 - Ngày 17/08/2025<br/>📍 70 Tô Hiến Thành, TP Nam Định</p>
-      <p>✨ Rất hân hạnh được đón tiếp!</p>
+    <div class="couple-img">
+      <img src="8.jpg" alt="Cô dâu">
+      <img src="7.jpg" alt="Chú rể">
     </div>
 
-    <h3>📸 Một vài khoảnh khắc đáng nhớ</h3>
-    <div class="photo-album">
-      <img src="1.jpg" />
-      <img src="2.jpg" />
-      <img src="3.jpg" />
-      <img src="1.jpg" />
-      <img src="2.jpg" />
-      <img src="3.jpg" />
-    </div>
+    <div class="names">Đỗ Nguyệt Anh & Trần Ngọc Hoàn</div>
 
-    <h3>🎁 Mừng cưới & Địa điểm</h3>
-    <div class="qr-section">
+    <div class="parents">
       <div>
-        <p>📍 Địa điểm tiệc cưới</p>
-        <img src="QR.png" alt="QR địa điểm" />
+        <strong>Nhà gái:</strong><br>
+        Bố: Đỗ Đình Dương<br>
+        Mẹ: Nguyễn Thị Đủ
       </div>
       <div>
-        <p>💌 Mừng cưới online</p>
-        <img src="QR.png" alt="QR mừng cưới" />
+        <strong>Nhà trai:</strong><br>
+        Bố: Trần Phú Lập<br>
+        Mẹ: Đỗ Thị Tỵ
       </div>
     </div>
 
-    <div class="form-section">
-      <h3>📝 Xác nhận tham dự & Gửi lời chúc</h3>
-      <form>
-        <label for="name">Tên của bạn:</label>
-        <input type="text" id="name" name="name" required />
+    <div class="invite-text"><strong>Trân trọng kính mời</strong></div>
 
-        <label>Bạn sẽ tham dự chứ?</label>
-        <input type="radio" id="yes" name="attend" value="yes">
-        <label for="yes">Có</label>
-        <input type="radio" id="no" name="attend" value="no">
-        <label for="no">Không</label>
-
-        <label for="message">Lời chúc:</label>
-        <textarea id="message" name="message" rows="4"></textarea>
-
-        <button class="btn" type="submit">Gửi</button>
-      </form>
+    <div class="info">
+      Quý khách đến dự lễ thành hôn của chúng tôi
+      <br/><br/>
+      🕘 <strong>Thời gian:</strong><br/>
+      👉 <strong>Nhà gái:</strong> 16h ngày 16/08/2025 tại 16 Lý Thánh Tông, TP Hải Dương<br/>
+      👉 <strong>Nhà trai:</strong> 10h ngày 17/08/2025 tại 70 Tô Hiến Thành, Nam Định
     </div>
+
+    <div class="album">
+      <img src="1.jpg" alt="Album 1">
+      <img src="2.jpg" alt="Album 2">
+      <img src="3.jpg" alt="Album 3">
+      <img src="4.jpg" alt="Album 4">
+      <img src="5.jpg" alt="Album 5">
+      <img src="6.jpg" alt="Album 6">
+    </div>
+
+    <div class="qrs">
+      <div>
+        <strong>QR địa chỉ nhà gái</strong><br>
+        <img src="QR.png" alt="QR Nhà gái">
+      </div>
+      <div>
+        <strong>QR địa chỉ nhà trai</strong><br>
+        <img src="QR.png" alt="QR Nhà trai">
+      </div>
+      <div>
+        <strong>QR chuyển khoản cô dâu</strong><br>
+        <img src="QR.png" alt="QR Cô dâu">
+      </div>
+    </div>
+
+    <div class="confirm">
+      <p><strong>Hãy xác nhận tham dự để chúng tôi chuẩn bị chu đáo nhất nhé!</strong></p>
+      <a href="https://forms.gle/xxYqnw87C8cLrrKv7" target="_blank">Xác nhận tham dự</a>
+    </div>
+
+    <div class="footer">Rất hân hạnh được đón tiếp!</div>
   </div>
 
-  <!-- ❄️ Snow effect -->
-  <script>
-    const snowCount = 50;
-    for (let i = 0; i < snowCount; i++) {
-      const snowflake = document.createElement("div");
-      snowflake.className = "snowflake";
-      snowflake.textContent = "❄";
-      snowflake.style.left = Math.random() * 100 + "vw";
-      snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
-      snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
-      document.body.appendChild(snowflake);
-    }
-  </script>
+  <audio autoplay loop>
+    <source src="nhac-nen.mp3" type="audio/mpeg">
+  </audio>
 </body>
 </html>
