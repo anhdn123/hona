@@ -11,7 +11,9 @@
       font-family: 'Roboto', sans-serif;
       background: url('anhbia.jpg') no-repeat center center fixed;
       background-size: cover;
+      overflow-x: hidden;
     }
+
     .overlay {
       background-color: rgba(255,255,255,0.85);
       padding: 30px;
@@ -19,7 +21,9 @@
       margin: auto;
       border-radius: 16px;
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      position: relative;
     }
+
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 48px;
@@ -27,12 +31,14 @@
       margin-top: 0;
       color: #b86b77;
     }
+
     .couple-img {
       display: flex;
       justify-content: center;
       gap: 40px;
       margin-bottom: 20px;
     }
+
     .couple-img img {
       width: 150px;
       height: 150px;
@@ -41,41 +47,50 @@
       border: 4px solid #fff;
       box-shadow: 0 0 5px rgba(0,0,0,0.3);
     }
+
     .names {
       text-align: center;
       font-size: 24px;
       font-weight: bold;
       margin-bottom: 10px;
     }
+
     .parents {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 80px;
       text-align: center;
       margin-bottom: 20px;
       font-size: 16px;
+      flex-wrap: wrap;
     }
+
     .invite-text {
       text-align: center;
       font-size: 18px;
       margin: 30px 0 10px;
     }
+
     .info {
       text-align: center;
       font-size: 18px;
       margin-bottom: 20px;
     }
+
     .album {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin: 30px auto;
     }
+
     .album img {
       width: 100%;
       height: 300px;
       object-fit: cover;
       border-radius: 10px;
     }
+
     .qrs {
       display: flex;
       flex-wrap: wrap;
@@ -84,9 +99,11 @@
       margin-top: 30px;
       text-align: center;
     }
+
     .qrs div {
       flex: 1 1 200px;
     }
+
     .qrs img {
       width: 150px;
       height: 150px;
@@ -94,10 +111,12 @@
       border-radius: 10px;
       margin-top: 10px;
     }
+
     .confirm {
       text-align: center;
       margin-top: 40px;
     }
+
     .confirm a {
       display: inline-block;
       padding: 10px 20px;
@@ -107,21 +126,35 @@
       text-decoration: none;
       border-radius: 8px;
     }
+
     .confirm a:hover {
       background-color: #a25061;
     }
+
     .footer {
       text-align: center;
       font-style: italic;
       font-size: 16px;
       margin-top: 40px;
     }
+
     audio {
       display: none;
+    }
+
+    /* Tuyết rơi */
+    canvas.snow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
+  <canvas class="snow"></canvas>
+
   <div class="overlay">
     <h1>Nguyệt Anh & Hoàn</h1>
 
@@ -158,10 +191,10 @@
     <div class="album">
       <img src="1.jpg" alt="Album 1">
       <img src="2.jpg" alt="Album 2">
+      <img src="3.jpg" alt="Album 3">
       <img src="4.jpg" alt="Album 4">
       <img src="5.jpg" alt="Album 5">
       <img src="6.jpg" alt="Album 6">
-      <img src="3.jpg" alt="Album 3">
     </div>
 
     <div class="qrs">
@@ -190,5 +223,58 @@
   <audio autoplay loop>
     <source src="nhac-nen.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- Script tuyết rơi -->
+  <script>
+    const canvas = document.querySelector(".snow");
+    const ctx = canvas.getContext("2d");
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+    let num = 100;
+    let arr = [];
+
+    for (let i = 0; i < num; i++) {
+      arr.push({
+        x: Math.random() * w,
+        y: Math.random() * h,
+        r: Math.random() * 4 + 1,
+        d: Math.random() * num
+      });
+    }
+
+    function drawFlakes() {
+      ctx.clearRect(0, 0, w, h);
+      ctx.fillStyle = "white";
+      ctx.beginPath();
+      for (let i = 0; i < num; i++) {
+        let f = arr[i];
+        ctx.moveTo(f.x, f.y);
+        ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2, true);
+      }
+      ctx.fill();
+      moveFlakes();
+    }
+
+    let angle = 0;
+
+    function moveFlakes() {
+      angle += 0.01;
+      for (let i = 0; i < num; i++) {
+        let f = arr[i];
+        f.y += Math.cos(angle + f.d) + 1 + f.r / 2;
+        f.x += Math.sin(angle) * 2;
+
+        if (f.y > h) {
+          arr[i] = { x: Math.random() * w, y: 0, r: f.r, d: f.d };
+        }
+      }
+    }
+
+    setInterval(drawFlakes, 33);
+    window.addEventListener("resize", () => {
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
