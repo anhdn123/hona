@@ -150,6 +150,269 @@
       pointer-events: none;
       z-index: 999;
     }
+	* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: url('anhbia.jpg') no-repeat center center;
+      background-size: cover;
+      color: #333;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .left, .right {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .left {
+      background-color: rgba(255, 255, 255, 0.3);
+      align-items: center;
+      text-align: center;
+    }
+    .left h2 {
+      font-size: 3em;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 20px;
+      color: #d94e63;
+    }
+    .left h1 {
+      font-size: 5em;
+      font-family: 'Playfair Display', serif;
+      color: #333;
+      line-height: 1.2;
+    }
+    .right h3 {
+      font-size: 1.2em;
+      color: #d94e63;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+    .right .names {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      color: #ba2b45;
+      margin-bottom: 10px;
+    }
+    .right p {
+      margin: 15px 0 30px;
+      font-size: 1.1em;
+      color: #444;
+    }
+    .right button {
+      margin: 10px 0;
+      padding: 12px 20px;
+      background: transparent;
+      border: 2px solid #d94e63;
+      color: #d94e63;
+      font-size: 1em;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .right button:hover {
+      background: #d94e63;
+      color: white;
+    }
+    .date {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 25px 0 10px;
+    }
+    .countdown {
+      font-size: 1.2em;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .countdown div {
+      text-align: center;
+    }
+    .countdown span {
+      font-size: 1.5em;
+      display: block;
+    }
+    .wedding-events {
+      background-color: #ffffff4d;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .wedding-events h2 {
+      font-size: 3em;
+      color: #d94e63;
+      margin-bottom: 10px;
+    }
+    .wedding-events p.subtitle {
+      font-size: 1.1em;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    .event-card {
+      background: white;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #e9b1b9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .event-card h3 {
+      color: #d94e63;
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+    .event-details {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      font-size: 1em;
+      color: #444;
+    }
+    .event-details img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .event-text {
+      flex: 1;
+    }
+    .event-text p {
+      margin: 4px 0;
+    }
+    .love-story-section {
+      background-color: #fff0f3;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .love-story-section h2 {
+      font-size: 3em;
+      color: #d94e63;
+      margin-bottom: 40px;
+    }
+    .story-item {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .story-item img {
+      width: 100%;
+      max-width: 500px;
+      object-fit: cover;
+    }
+    .story-text {
+      flex: 1;
+      padding: 30px;
+      font-size: 1.1em;
+      text-align: left;
+      color: #444;
+    }
+    @media (max-width: 768px) {
+      .story-item {
+        flex-direction: column;
+      }
+    }
+	.love-section {
+    background-color: #fff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .love-container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .love-title {
+    text-align: center;
+    color: #e97474;
+    font-size: 28px;
+    margin-bottom: 40px;
+    border: 2px solid #f5c6c6;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .love-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .love-img-box, .love-text-box {
+    flex: 1 1 360px;
+  }
+
+  .love-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-height: 360px;
+  }
+
+  .love-text-box {
+    background-color: #f07c7c;
+    color: white;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .love-text-box h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .love-text-box hr {
+    width: 50px;
+    border: 1px solid #fff;
+    margin: 10px 0;
+  }
+
+  .love-text-box p {
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  @media(max-width: 768px) {
+    .love-img-box img {
+      max-height: none;
+    }
+  }
+	
+	
   </style>
 </head>
 <body>
@@ -178,16 +441,119 @@
       </div>
     </div>
 
-    <div class="invite-text"><strong>Trân trọng kính mời</strong></div>
+     <div class="wedding-events">
+    <h2>Sự Kiện Cưới</h2>
 
-    <div class="info">
-      Quý khách đến dự lễ thành hôn của chúng tôi
-      <br/><br/>
-      🕘 <strong>Thời gian:</strong><br/>
-      👉 <strong>Nhà gái:</strong> 16h30 ngày 16/08/2025 tại 16 Lý Thánh Tông, TP Hải Dương<br/>
-      👉 <strong>Nhà trai:</strong> 11h ngày 17/08/2025 tại Nhà hàng bia Nada - số 586 Giải Phóng Nam Định
+    <div class="event-card">
+      <h3>MỜI TIỆC NHÀ TRAI</h3>
+      <div class="event-details">
+        <img src="7.jpg" alt="Ảnh cưới">
+        <div class="event-text">
+          <p>🕒 11:00 - 17/08/2025</p>
+          <p>📍Nhà hàng bia Nada - số 586 Giải Phóng Nam Định </p>
+        </div>
+      </div>
     </div>
 
+    <div class="event-card">
+      <h3>MỜI TIỆC NHÀ GÁI</h3>
+      <div class="event-details">
+        <img src="8.jpg" alt="Ảnh cưới">
+        <div class="event-text">
+          <p>🕒 17:00 - 16/08/2025</p>
+          <p>📍 16 Lý Thánh Tông, Lê Thanh Nghị, Hải Dương</p>
+        </div>
+      </div>
+    </div>
+  </div>
+ <div class="container">
+    <div class="left">
+      <h2>The Big Day!</h2>
+      <h1>Save<br>the<br>Date</h1>
+    </div>
+    <div class="right">
+      <div class="names">Ngọc Hoàn & Nguyệt Anh</div>
+      <p>Trân trọng mời bạn đến dự lễ cưới của chúng mình. Một lời chúc của bạn chắc chắn sẽ làm cho đám cưới của chúng mình có thêm một niềm hạnh phúc!</p>
+      <a href="https://forms.gle/xxYqnw87C8cLrrKv7" target="_blank">
+		<button>GỬI LỜI CHÚC</button>
+	</a>
+     <a href="https://forms.gle/xxYqnw87C8cLrrKv7" target="_blank">
+		<button>XÁC NHẬN THAM DỰ</button>
+	</a>
+      <div class="date">16tháng 08 2025</div>
+      <div class="countdown">
+        <div><span id="days">00</span>Ngày</div>
+        <div><span id="hours">00</span>Giờ</div>
+        <div><span id="minutes">00</span>Phút</div>
+        <div><span id="seconds">00</span>Giây</div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="wedding-events">
+ <h2>CHUYỆN CHÚNG MÌNH...</h2>
+<!-- SECTION 1 -->
+<section class="love-section">
+  <div class="love-container">
+    <h2 class="love-title">BẮT ĐẦU TỪ</h2>
+    <div class="love-flex">
+      <div class="love-img-box">
+        <img src="c1.jpg" alt="Ảnh kỷ niệm">
+      </div>
+      <div class="love-text-box">
+        <h3>Chúng mình đã từng...</h3>
+        <hr>
+        <p>
+          Chúng mình đã từng là 2 người xa lạ :)94 chào 94 nhé :) Cảm động nhất chính là chuyện 1 người đi rất xa để gặp 1 người. Có thể là 60, 80 km chỉ để gặp nhau 20’, 30’.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section class="love-section">
+  <div class="love-container">
+    <h2 class="love-title">TỪNG BƯỚC TIẾN TỚI</h2>
+    <div class="love-flex">
+      <div class="love-img-box">
+        <img src="c3.jpg" alt="Ảnh kỷ niệm">
+      </div>
+      <div class="love-text-box">
+        <h3>Từng bước tiến tới...</h3>
+        <hr>
+        <p>
+          Những chặng đường cùng nhau :) 1 đứa dám rủ và 1 đứa dám đi. Đơn giản là đi đâu cũng được :) Chỉ cần đi cùng nhau :)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section class="love-section">
+  <div class="love-container">
+    <h2 class="love-title">HAPPY ENDING</h2>
+    <div class="love-flex">
+      <div class="love-img-box">
+        <img src="c4.jpg" alt="Ảnh kỷ niệm">
+      </div>
+      <div class="love-text-box">
+        <h3>2 năm - Happy Ending đến rồi.</h3>
+        <hr>
+        <p>
+          2 năm không phải là quãng thời gian dài, nhưng cũng không quá ngắn, đủ để chúng mình nhận ra nhiều điều. Cuối cùng ngày vui nhất của chúng mình cũng tới rồi. Cảm ơn vì chúng ta đã luôn là một phần trong cuộc sống của nhau. Em và anh không chỉ là người yêu mà còn là tri kỷ, là bạn đồng hành.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+  
+  
+  
+  <div class="wedding-events">
+   <h2>ALBUM ẢNH CƯỚI</h2>
     <div class="album">
       <img src="1.jpg" alt="Album 1">
       <img src="2.jpg" alt="Album 2">
@@ -196,27 +562,36 @@
       <img src="5.jpg" alt="Album 5">
       <img src="6.jpg" alt="Album 6">
     </div>
+	</div>
+    <section id="gift-box" style="text-align: center; padding: 60px 20px; background-color: #fff5f5;">
+  <h2 style="font-size: 32px; color: #eb6f6f; margin-bottom: 8px;">Hộp mừng cưới</h2>
+  <hr style="width: 60px; border: 1px solid #eb6f6f; margin: 10px auto;">
+  <p style="max-width: 600px; margin: 0 auto 40px; color: #555;">
+    Nếu có thể, bạn hãy tới tham dự Đám cưới, chung vui và Mừng cưới trực tiếp cho chúng mình nha ^^. Cảm ơn bạn rất nhiều!
+  </p>
 
-    <div class="qrs">
-      <div>
-        <strong>QR địa chỉ nhà gái</strong><br>
-        <img src="QR.png" alt="QR Nhà gái">
-      </div>
-      <div>
-        <strong>QR địa chỉ nhà trai</strong><br>
-        <img src="QR.png" alt="QR Nhà trai">
-      </div>
-      <div>
-        <strong>QR chuyển khoản cô dâu</strong><br>
-        <img src="QR.png" alt="QR Cô dâu">
-      </div>
-      <div>
-        <strong>QR chuyển khoản chú rể</strong><br>
-        <img src="QR.png" alt="QR Cô dâu">
-      </div>
+  <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+    <!-- Chú rể -->
+    <div style="background-color: #f57c7c; color: white; padding: 30px 20px; border-radius: 12px; width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom: 15px;">Mừng cưới đến chú rể</h3>
+      <img src="QR.png" alt="QR chú rể" style="width: 150px; border-radius: 8px; margin-bottom: 15px;">
+      <p>Ngân hàng: Vietinbank<br>
+         Tên: Trần Ngọc Hoàn<br>
+         STK: 102870842262</p>
     </div>
 
-    <div class="confirm">
+    <!-- Cô dâu -->
+    <div style="background-color: #f57c7c; color: white; padding: 30px 20px; border-radius: 12px; width: 260px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <h3 style="margin-bottom: 15px;">Mừng cưới đến cô dâu</h3>
+      <img src="QR.png" alt="QR cô dâu" style="width: 150px; border-radius: 8px; margin-bottom: 15px;">
+      <p>Ngân hàng: Vietinbank<br>
+         Tên: Đỗ Nguyệt Anh<br>
+         STK: 102870842262</p>
+    </div>
+  </div>
+</section>
+
+ <div class="confirm">
       <p><strong>Hãy xác nhận tham dự để chúng tôi chuẩn bị chu đáo nhất nhé!</strong></p>
       <a href="https://forms.gle/xxYqnw87C8cLrrKv7" target="_blank">Xác nhận tham dự</a>
     </div>
@@ -227,6 +602,31 @@
   <audio autoplay loop>
     <source src="nhac-nen.mp3" type="audio/mpeg">
   </audio>
+  
+  <script>
+    function updateCountdown() {
+      const eventDate = new Date("2025-08-16T12:00:00").getTime();
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      if (distance < 0) return;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+  
+  
 
   <!-- Script tuyết rơi -->
   <script>
